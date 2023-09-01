@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getEnvVariables } from "../helpers";
+import { ELocalStorageNames } from "../commons/enums";
 
 const { VITE_API_URL } = getEnvVariables();
 
@@ -10,7 +11,7 @@ const appApi = axios.create({
 appApi.interceptors.request.use((config) => {
   config.headers = {
     ...config.headers,
-    "x-token": localStorage.getItem("token"),
+    Authorization: `Bearer ${localStorage.getItem(ELocalStorageNames.TOKEN)}`,
   };
 
   return config;

@@ -1,4 +1,6 @@
-import { StarOutline } from "@mui/icons-material";
+// import { StarOutline } from "@mui/icons-material";
+import LocalDrinkIcon from '@mui/icons-material/LocalDrink';
+
 import { Grid, Typography } from "@mui/material";
 
 export const NothingSelectedView = () => {
@@ -10,17 +12,17 @@ export const NothingSelectedView = () => {
       alignItems="center"
       justifyContent="center"
       sx={{
-        minHeight: "calc(100vh - 100px)",
-        backgroundColor: "primary.main",
+        minHeight: "88vh",
+        backgroundColor: "secondary.main",
         borderRadius: 3,
       }}
     >
       <Grid item xs={12}>
-        <StarOutline sx={{ fontSize: 100, color: "white" }} />
+        <LocalDrinkIcon sx={{ fontSize: 100, color: "secondary.contrastText" }} />
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="h5" color="white">
-          Please Choose a note
+        <Typography variant="h5" color="secondary.contrastText">
+          The Drink Code
         </Typography>
       </Grid>
     </Grid>

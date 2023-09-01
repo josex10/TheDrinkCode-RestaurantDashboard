@@ -1,1 +1,1 @@
-export * from "./getEnvVariables";
+export * from "./env/getEnvVariables";

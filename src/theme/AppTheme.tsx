@@ -1,10 +1,10 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { purpleTheme } from "./purpleTheme";
 import { IChildrenProps } from '../commons/models';
+import { orangeTheme } from "./orangeTheme";
 
 export const AppTheme = (props: IChildrenProps ) => {
   return (
-    <ThemeProvider theme={purpleTheme}>
+    <ThemeProvider theme={orangeTheme}>
       <CssBaseline />
       {props.children}
     </ThemeProvider>

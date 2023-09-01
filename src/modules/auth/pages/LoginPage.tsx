@@ -8,14 +8,14 @@ import Swal from "sweetalert2";
 export const LoginPage = () => {
   const { startLogin, errorMessage } = useAuthStore();
 
-  const { email, password, onInputChange } = useForm({
-    email: "info@wings66cr.com",
-    password: "admin123",
+  const { username, password, onInputChange } = useForm({
+    username: "jose7937",
+    password: "thedrinkcode",
   });
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    startLogin({ email, password });
+    startLogin({ username, password });
   };
 
   useEffect(() => {
@@ -30,12 +30,12 @@ export const LoginPage = () => {
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
             <TextField
-              label="Email"
-              type="email"
-              placeholder="email@thedrinkcode.com"
+              label="Username"
+              type="text"
+              placeholder="myusername"
               fullWidth
-              name="email"
-              value={email}
+              name="username"
+              value={username}
               onChange={onInputChange}
             ></TextField>
           </Grid>
